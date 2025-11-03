@@ -9,7 +9,12 @@ import Stack from '@mui/material/Stack';
 
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 ,
+      position: 'fixed',
+      width: '100%', 
+      top: 0,
+      zIndex: 9999
+    }}>
       <AppBar position="static"
       sx={{background: "linear-gradient(170deg, #2dce89, #2dcecc)"}}
       >

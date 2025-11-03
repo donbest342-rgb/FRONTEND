@@ -33,8 +33,7 @@ const RegistrationScreen = () => {
       )
       console.log(data);
       navigate('/dash')
-      localStorage.setItem('userToken', token);
-      localStorage.setItem('firstName', firstName);
+      
     } catch (error) {
       console.error(error?.response?.data?.error);
       setError(error?.response?.data?.error || "Registration failed");

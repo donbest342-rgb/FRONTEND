@@ -26,28 +26,11 @@ export default function AccountMenu() {
   };
 // this is the section for profile 
 
-      const [firstName, setFirstName] = useState('');
-
-      useEffect(() => {
-        // In a real application, you'd fetch the username after login
-        // or retrieve it from a global state/local storage.
-        // For demonstration, we'll set a sample username.
-        const loggedInFristName = ""; // Replace with actual username from your authentication
-        setFirstName(loggedInFristName);
-      }, []);
-
-      const getFirstInitial = (name) => {
-        if (name && name.length > 0) {
-          return name.charAt(0).toUpperCase();
-        }
-        return ''; // Return empty string if no username
-      };
-      const userInitial = getFirstInitial(firstName);
-
+      
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-          <Typography sx={{ minWidth: 100 }}>welcome, {firstName}!</Typography>
+          <Typography sx={{ minWidth: 100 }}>welcome, !</Typography>
         <Tooltip title="Account settings">
           <IconButton
             onClick={handleClick}
@@ -57,7 +40,7 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}>{userInitial}</Avatar>
+            <Avatar sx={{ width: 32, height: 32 }}></Avatar>
           </IconButton>
         </Tooltip>
       </Box>

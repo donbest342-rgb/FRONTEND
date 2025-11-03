@@ -18,7 +18,6 @@ const Login = () => {
     const navigate = useNavigate ()
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -28,11 +27,9 @@ const Login = () => {
    try {
     const res = await
         axios.post('https://students-learning-api.onrender.com/api/auth/login',
-            {email, password, firstName})
+            {email, password})
         console.log(res)
         navigate('/dash')
-      localStorage.setItem('userToken', token);
-      localStorage.setItem('firstName', firstName);
         
    } catch (error) {
     console.error(error)

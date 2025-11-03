@@ -8,7 +8,7 @@ const Heros = () => {
         <Box  className= 'name'
         
         sx={{
-          height: '65vh',
+          height: '90vh',
           }}>
           <Typography className='type tp' variant='h3' sx={{
             fontSize: 'bold',
